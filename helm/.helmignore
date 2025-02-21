@@ -23,3 +23,5 @@
 .vscode/
 templates/gateway*
 templates/virtualservice*
+
+__pycache__/

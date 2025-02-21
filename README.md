@@ -3,46 +3,42 @@
 + jenkins_docker folder: deploy jenkins using docker
 + monitoring_docker folder: deploy observable systems using docker
 ## Repository's structure
-```
-DO AN
-├── ansible
-│   ├── deploy_jenkins
-│   └── secrets
-├── custom_jenkins
-├── data
-├── helm
-│   └── templates
-├── images
-├── jenkins_docker
-├── models
-├── monitoring-docker
-│   ├── alertmanager
-│   │   └── data
-│   ├── elk
-│   │   ├── elasticsearch
-│   │   │   └── config
-│   │   ├── extensions
-│   │   │   └── filebeat
-│   │   │       └── config
-│   │   ├── kibana
-│   │   │   └── config
-│   │   ├── run_env
-│   │   └── setup
-│   │       └── roles
-│   ├── grafana
-│   │   ├── config
-│   │   └── dashboards
-│   ├── instrument
-│   │   ├── logs
-│   │   │   └── __pycache__
-│   │   ├── metrics
-│   │   └── traces
-│   │       └── __pycache__
-│   └── prometheus
-│       └── config
-├── notebooks
-└── terraform
-```
++ ansible
+    + deploy_jenkins
+    + secrets
++ custom_jenkins
++ data
++ helm
+    + templates
++ images
+    + logos
++ jenkins_docker
++ models
++ monitoring-docker
+    + alertmanager
+        + data
+    + elk
+        + elasticsearch
+            + config
+        + extensions
+            + filebeat
+                + config
+        + kibana
+            + config
+        + run_env
+        + setup
+            + roles
+    + grafana
+        + config
+        + dashboards
+    + instrument
+        + logs
+        + metrics
+        + traces
+    + prometheus
+        + config
++ notebooks
++ terraform
 ## Table of contents
 1. [System Architecture](#1-system-architecture)
 2. [Installation](#2-installation)
@@ -64,8 +60,7 @@ DO AN
 + Docker engine
 + Docker images:
     + [khaibk21/predict-diabetes](https://hub.docker.com/repository/docker/khaibk21/predict-diabetes/general): build diabetes prediction service
-    + [fullstackdatascience/jenkins:lts](https://hub.docker.com/r/fullstackdatascience/jenkins/tags): build Jenkins service
-    + [fullstackdatascience/jenkins-k8s/lts](https://hub.docker.com/r/fullstackdatascience/jenkins-k8s): build Jenkins service + Helm
+    + [jenkins/jenkins](https://hub.docker.com/r/jenkins/jenkins): build Jenkins service
 ## 3. FastAPI
 + ```uvicorn main:app --host 0.0.0.0 --port 4001 --reload```
 + ```ngrok http 4001```
